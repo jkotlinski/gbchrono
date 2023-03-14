@@ -52,9 +52,9 @@ main:
       ; enable timer + interrupts {{{
       ; start 4096/16=256 Hz timer
       ld    a,-16
-      ldh   [6],a ; TMA
+      ldh   [6],a       ; TMA
       ld    a,4
-      ldh   [7],a ; TAC
+      ldh   [7],a       ; TAC
 
       ; enable timer and joypad interrupts
       xor   a
