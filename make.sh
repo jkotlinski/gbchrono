@@ -1,3 +1,3 @@
-rgbasm.exe -h test.s -o test.o
-rgblink.exe test.o -o test.gb
-rgbfix.exe -c -v -p 0 test.gb
+rgbasm.exe -h gbtime.s -o gbtime.o
+rgblink.exe gbtime.o -o gbtime.gb
+rgbfix.exe -c -v -p 0 gbtime.gb
