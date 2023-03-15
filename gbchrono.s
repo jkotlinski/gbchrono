@@ -4,6 +4,7 @@
 ; a tool for measuring game boy clock speed
 
 SECTION "timer",ROM0[$50]
+      push  af
       ld    c,low(digits)
 :     ldh   a,[c]
       inc   a
@@ -14,6 +15,7 @@ SECTION "timer",ROM0[$50]
       inc   c
       jr    :-
 :     ldh   [c],a
+      pop   af
       reti
 
 SECTION "boot",ROM0[$100]
@@ -86,8 +88,8 @@ SECTION "main",ROM0[$150]
       halt
       nop
       jr    :-
-      ; }}}
-show_results: ; {{{
+
+show_results:
       ; wait for button up
 :     ldh   a,[0]
       cp    a,$df
