@@ -36,6 +36,11 @@ main:
       ld    [hl+],a
       ld    [hl+],a
       ; }}}
+      ; beep {{{
+      ld    a,$80
+      ldh   [$12],a
+      ldh   [$14],a
+      ; }}}
       ; wait for start press {{{
       ; select P15 by setting it low
       ld    a,$10
@@ -50,6 +55,10 @@ main:
       and   a,$f
       cp    a,$f
       jr    nz,:-
+      ; }}}
+      ; disable sound {{{
+      xor   a
+      ldh   [$26],a
       ; }}}
       ; enable timer + interrupts {{{
       ; start 4096/16=256 Hz timer
