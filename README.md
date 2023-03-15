@@ -13,18 +13,18 @@ A real Game Boy will run faster or slower.
 This project measures how fast or slow.
 The results are compiled to a database, which may be used as reference.
 
-## Participate
+## Participate!
 
  1. Find an accurate timer (e.g. smartwatch, smartphone).
  2. Install gbchrono.gb on a Game Boy flash cartridge.
  3. Start your Game Boy. gbchrono.gb will beep to show that is it ready. Prepare your timer.
  4. Simultaneously start timer and tap A on Game Boy. The measurement starts when the button is released.
- 5. Let your Game Boy run for a long time. Maybe overnight?
+ 5. Let your Game Boy run overnight.
  6. Simultaneously stop timer and tap A on Game Boy. The measurement stops when the button is released.
  7. The Game Boy will now show some digits that tell the elapsed time.
  8. Enter the data on the Google Sheet.
 
-## Why Participate?
+## Why participate?
 
  * Have fun!
  * Contribute to Game Boy science!
