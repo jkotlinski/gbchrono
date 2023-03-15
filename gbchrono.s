@@ -121,22 +121,23 @@ show_results:
       jr    nz,:-
 
       ; print digits
+      ld    hl,$9906
       ldh   a,[$87]
-      ld    [$9906],a
+      ld    [hl+],a
       ldh   a,[$86]
-      ld    [$9907],a
+      ld    [hl+],a
       ldh   a,[$85]
-      ld    [$9908],a
+      ld    [hl+],a
       ldh   a,[$84]
-      ld    [$9909],a
+      ld    [hl+],a
       ldh   a,[$83]
-      ld    [$990a],a
+      ld    [hl+],a
       ldh   a,[$82]
-      ld    [$990b],a
+      ld    [hl+],a
       ldh   a,[$81]
-      ld    [$990c],a
+      ld    [hl+],a
       ldh   a,[$80]
-      ld    [$990d],a
+      ld    [hl+],a
 
       ; re-enable screen
       ld    a,$91
