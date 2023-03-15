@@ -13,12 +13,6 @@ A real Game Boy will run faster or slower.
 This project measures how fast or slow.
 The results are compiled to a database, which future generations may use as a reference.
 
-## Why Participate?
-
- * It is fun and easy!
- * Contribute to Game Boy science!
- * Learn more about your Game Boy!
-
 ## How to Participate
 
  1. Find an accurate timer (e.g. smartwatch, smartphone).
@@ -28,4 +22,10 @@ The results are compiled to a database, which future generations may use as a re
  5. Let your Game Boy run overnight.
  6. Simultaneously stop timer and tap A on Game Boy. The measurement stops when the button is released.
  7. The Game Boy will now show some digits that tell the elapsed time.
- 8. Enter the data on the Google Sheet.
+ 8. Enter the data on the [Google Sheet](https://docs.google.com/spreadsheets/d/1nza1941CTqP_UokA6tJ0CmYZTZqpSBRJrvyjNqIoOt8/edit?usp=sharing).
+
+## Why Participate?
+
+ * It is fun and easy!
+ * Contribute to Game Boy science!
+ * Learn more about your Game Boy!
