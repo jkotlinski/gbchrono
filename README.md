@@ -15,12 +15,12 @@ The results are compiled to a database, which may be used as reference.
 
 ## Participate
 
- 1. Find a reasonably accurate timer (e.g. smartwatch, smartphone).
+ 1. Find an accurate timer (e.g. smartwatch, smartphone).
  2. Install gbchrono.gb on a Game Boy flash cartridge.
- 3. Start your Game Boy. gbchrono.gb will beep to show that is it ready. Ready your timer.
- 4. With a quick tap, simultaneously start timer and press A on Game Boy. The beep will stop.
- 5. Let your Game Boy run overnight.
- 6. With a quick tap, simultaneously stop timer and press A on Game Boy.
+ 3. Start your Game Boy. gbchrono.gb will beep to show that is it ready. Prepare your timer.
+ 4. Simultaneously start timer and tap A on Game Boy. The measurement starts when the button is released.
+ 5. Let your Game Boy run for a long time. Maybe overnight?
+ 6. Simultaneously stop timer and tap A on Game Boy. The measurement stops when the button is released.
  7. The Game Boy will now show some digits that tell the elapsed time.
  8. Enter the data on the Google Sheet.
 
