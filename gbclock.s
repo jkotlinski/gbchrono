@@ -1,6 +1,8 @@
 ; MIT License
 ; Copyright (c) 2023 Johan Kotlinski
 
+; a tool for measuring game boy clock speed
+
 SECTION "timer",ROM0[$50]
       jp    timer_isr
 
