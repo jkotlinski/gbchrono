@@ -3,7 +3,7 @@
 
 ; a tool for measuring game boy clock speed
 
-SECTION "timer",ROM0[$50]
+SECTION "timer_isr",ROM0[$50] ; {{{
       push  af
       ld    c,low(digits)
 :     ldh   a,[c]
@@ -16,15 +16,16 @@ SECTION "timer",ROM0[$50]
       jr    :-
 :     ldh   [c],a
       pop   af
-      reti
+      reti  ; }}}
 
 SECTION "boot",ROM0[$100]
-      jr    $150
+      jr    main
 
 SECTION "hram",HRAM[$ff80]
 digits:
 
 SECTION "main",ROM0[$150]
+main: ; {{{
       ; disable screen {{{
 :     ldh   a,[$44]     ; LY
       cp    a,144
@@ -81,25 +82,26 @@ SECTION "main",ROM0[$150]
 
       ei
       ; }}}
-      ; main loop {{{
-:     ldh   a,[0]
+      ; }}}
+main_loop: ; {{{
+      ldh   a,[0]
       cp    a,$df
       call  nz,show_results
       halt
       nop
-      jr    :-
-
-show_results:
-      ; wait for button up
+      jr    main_loop
+      ; }}}
+show_results: ; {{{
+      ; wait for button up {{{
 :     ldh   a,[0]
       cp    a,$df
       jr    nz,:-
-
-      ; disable interrupts
+      ; }}}
+      ; disable interrupts {{{
       xor   a
       ldh   [$ff],a     ; IE
-
-      ; initialize font
+      ; }}}
+      ; initialize font {{{
       ld    hl,$8000
       ld    de,font
 :     ld    a,[de]
@@ -108,8 +110,8 @@ show_results:
       ld    a,l
       cp    a,176
       jr    nz,:-
-
-      ; clear bg map
+      ; }}}
+      ; clear bg map {{{
       ld    hl,$9800
 :     ld    [hl],10     ; space
       inc   hl
@@ -119,8 +121,8 @@ show_results:
       ld    a,h
       cp    a,$9a
       jr    nz,:-
-
-      ; print digits
+      ; }}}
+      ; print digits {{{
       ld    hl,$9906
       ldh   a,[$87]
       ld    [hl+],a
@@ -138,11 +140,11 @@ show_results:
       ld    [hl+],a
       ldh   a,[$80]
       ld    [hl+],a
-
-      ; re-enable screen
+      ; }}}
+      ; re-enable screen {{{
       ld    a,$91
       ldh   [$40],a     ; LCDC
-
+      ; }}}
       ret
       ; }}}
 font: ; {{{
