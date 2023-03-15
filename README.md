@@ -16,8 +16,8 @@ The results are compiled to a database, which future generations may use as a re
 ## How to Participate
 
  1. Find an accurate timer (e.g. smartwatch, smartphone).
- 2. Install gbchrono.gb on a Game Boy flash cartridge.
- 3. Start your Game Boy. gbchrono.gb will beep to show that is it ready. Prepare your timer.
+ 2. Install [gbchrono.gb](https://github.com/jkotlinski/gbchrono/releases/) on a Game Boy flash cartridge.
+ 3. Start your Game Boy. It will beep to show that is it ready. Prepare your timer.
  4. Simultaneously start timer and tap A on Game Boy. The measurement starts when the button is released.
  5. Let your Game Boy run overnight.
  6. Simultaneously stop timer and tap A on Game Boy. The measurement stops when the button is released.
