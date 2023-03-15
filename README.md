@@ -1,8 +1,8 @@
-# Game Boy Clock Challenge
+# Game Boy Clock Accuracy Challenge
 
 ## About
 
-The Game Boy Clock Challenge is about determining real clock speeds of Game Boys.
+The Game Boy Clock Accuracy Challenge is about determining real clock speeds of Game Boys.
 
 ## Background
 
