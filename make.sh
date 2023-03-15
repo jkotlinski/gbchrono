@@ -1,3 +1,3 @@
-rgbasm.exe -h gbclock.s -o gbclock.o
-rgblink.exe gbclock.o -o gbclock.gb
-rgbfix.exe -t GBCLOCK -v -p 0 gbclock.gb
+rgbasm.exe -h gbchrono.s -o gbchrono.o
+rgblink.exe gbchrono.o -o gbchrono.gb
+rgbfix.exe -t GBCHRONO -v -p 0 gbchrono.gb
