@@ -73,13 +73,11 @@ main: ; {{{
       ldh   [6],a       ; TMA
       ld    a,4
       ldh   [7],a       ; TAC
-
       ; enable interrupts
       xor   a
       ldh   [$f],a      ; IF
       ld    a,4
       ldh   [$ff],a     ; IE
-
       ei
       ; }}}
       ; }}}
