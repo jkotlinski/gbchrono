@@ -4,19 +4,25 @@
 ; a tool for measuring game boy clock speed
 
 SECTION "timer",ROM0[$50]
-      jp    timer_isr
-
-SECTION "joypad",ROM0[$60]
-      jp    joypad_isr
+      ld    c,low(digits)
+:     ldh   a,[c]
+      inc   a
+      cp    a,10
+      jr    nz,:+
+      xor   a
+      ldh   [c],a
+      inc   c
+      jr    :-
+:     ldh   [c],a
+      reti
 
 SECTION "boot",ROM0[$100]
-      jr    main
+      jr    $150
 
 SECTION "hram",HRAM[$ff80]
 digits:
 
-SECTION "test",ROM0[$150]
-main:
+SECTION "main",ROM0[$150]
       ; disable screen {{{
 :     ldh   a,[$44]     ; LY
       cp    a,144
@@ -47,55 +53,50 @@ main:
       ldh   [0],a
       ; wait for button down
 :     ldh   a,[0]
-      and   a,$f
-      cp    a,$f
+      cp    a,$df
       jr    z,:-
       ; wait for button up
 :     ldh   a,[0]
-      and   a,$f
-      cp    a,$f
+      cp    a,$df
       jr    nz,:-
       ; }}}
       ; disable sound {{{
       xor   a
       ldh   [$26],a
       ; }}}
-      ; enable timer + interrupts {{{
-      ; start 4096/16=256 Hz timer
+      ; start timer {{{
+      ; 4096/16=256 Hz
       ld    a,-16
       ldh   [6],a       ; TMA
       ld    a,4
       ldh   [7],a       ; TAC
 
-      ; enable timer and joypad interrupts
+      ; enable interrupts
       xor   a
       ldh   [$f],a      ; IF
-      ld    a,$14
+      ld    a,4
       ldh   [$ff],a     ; IE
 
       ei
       ; }}}
-      ; idle loop {{{
-:     halt
+      ; main loop {{{
+:     ldh   a,[0]
+      cp    a,$df
+      call  nz,show_results
+      halt
       nop
       jr    :-
       ; }}}
+show_results: ; {{{
+      ; wait for button up
+:     ldh   a,[0]
+      cp    a,$df
+      jr    nz,:-
 
-timer_isr: ; {{{
-      ld    c,low(digits)
-:     ldh   a,[c]
-      inc   a
-      cp    a,10
-      jr    nz,:+
+      ; disable interrupts
       xor   a
-      ldh   [c],a
-      inc   c
-      jr    :-
-:     ldh   [c],a
-      reti
-      ; }}}
+      ldh   [$ff],a     ; IE
 
-joypad_isr: ; {{{
       ; initialize font
       ld    hl,$8000
       ld    de,font
@@ -139,13 +140,8 @@ joypad_isr: ; {{{
       ld    a,$91
       ldh   [$40],a     ; LCDC
 
-      ; disable interrupts
-      xor   a
-      ldh   [$ff],a     ; IE
-
-      reti
+      ret
       ; }}}
-
 font: ; {{{
       db    $00,$00,$7E,$3C,$66,$66,$6E,$6E     ; 0
       db    $66,$66,$76,$76,$66,$66,$7E,$3C
