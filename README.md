@@ -26,6 +26,6 @@ The results are compiled to a database, which future generations may use as a re
 
 ## Why Participate?
 
- * It is fun and easy!
- * Contribute to Game Boy science!
- * Learn more about your Game Boy!
+ * It is fun and easy
+ * Contribute to Game Boy science
+ * Learn more about your Game Boy
