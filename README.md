@@ -7,7 +7,7 @@ The Game Boy Clock Accuracy Challenge is about determining real clock speeds of 
 ## Background
 
 The Game Boy CPU is specified to run at 4194304 Hz.
-(Super Game Boy: 4295454 Hz.)
+(Super Game Boy: 4295454.4 Hz NTSC; 4256274 Hz PAL.)
 While these numbers seem very exact, they are known to be inaccurate.
 A real Game Boy will run faster or slower.
 This project measures how fast or slow.
