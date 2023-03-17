@@ -1,5 +1,7 @@
 # Game Boy Clock Accuracy Challenge
 
+![screenshot](https://github.com/jkotlinski/gbchrono/screenshot.png)
+
 ## About
 
 The Game Boy Clock Accuracy Challenge is about determining real clock speeds of Game Boys.
