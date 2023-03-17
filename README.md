@@ -24,7 +24,7 @@ The results are compiled to a database, which future generations may use as a re
  7. The Game Boy will now show some digits that tell the elapsed time.
  8. Enter the data on the [Google Sheet](https://docs.google.com/spreadsheets/d/1nza1941CTqP_UokA6tJ0CmYZTZqpSBRJrvyjNqIoOt8/edit?usp=sharing).
 
- ![screenshot from step 7](screenshot.png)
+ ![Example screenshot from step 7](screenshot.png) *Example screenshot from step 7*
 
 ## Why Participate?
 
