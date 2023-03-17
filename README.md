@@ -1,7 +1,5 @@
 # Game Boy Clock Accuracy Challenge
 
-![screenshot](screenshot.png)
-
 ## About
 
 The Game Boy Clock Accuracy Challenge is about determining real clock speeds of Game Boys.
@@ -16,7 +14,7 @@ This project measures how fast or slow.
 The results are compiled to a database, which future generations may use as a reference.
 
 ## How to Participate
-
+ 
  1. Find an accurate stopwatch (e.g. smartphone, smartwatch, PC).
  2. Install [gbchrono.gb](https://github.com/jkotlinski/gbchrono/releases/) on a Game Boy flash cartridge.
  3. Start your Game Boy. It will beep to show that is it ready. Prepare your stopwatch.
@@ -25,6 +23,8 @@ The results are compiled to a database, which future generations may use as a re
  6. Simultaneously stop stopwatch and tap A on Game Boy. The measurement stops when the button is released.
  7. The Game Boy will now show some digits that tell the elapsed time.
  8. Enter the data on the [Google Sheet](https://docs.google.com/spreadsheets/d/1nza1941CTqP_UokA6tJ0CmYZTZqpSBRJrvyjNqIoOt8/edit?usp=sharing).
+
+ ![screenshot from step 7](screenshot.png)
 
 ## Why Participate?
 
