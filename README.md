@@ -1,6 +1,6 @@
 # Game Boy Clock Accuracy Challenge
 
-![screenshot](https://github.com/jkotlinski/gbchrono/screenshot.png)
+![screenshot](screenshot.png)
 
 ## About
 
