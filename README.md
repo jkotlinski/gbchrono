@@ -11,7 +11,7 @@ The Game Boy CPU is specified to run at 4194304 Hz.
 While these numbers seem very exact, they are known to be inaccurate.
 A real Game Boy will run faster or slower.
 This project measures how fast or slow.
-The results are compiled to a database, which future generations may use as a reference.
+The results are kept in a public Google Sheet, free for anyone to use as a reference.
 
 ## How to Participate
 
