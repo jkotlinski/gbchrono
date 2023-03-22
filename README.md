@@ -30,5 +30,5 @@ The results are kept in a public Google Sheet, free for anyone to use as a refer
 ## Why Participate?
 
  * It is fun and easy!
- * You will contribute to Game Boy science!
+ * Contribute to Game Boy science!
  * Learn the true speed of your Game Boy!
