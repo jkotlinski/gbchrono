@@ -2,7 +2,7 @@
 
 ## About
 
-The Game Boy Clock Accuracy Challenge is about determining the real clock speed of all different Game Boy models.
+The Game Boy Clock Accuracy Challenge is about determining the real clock speed of different Game Boy models.
 
 ## Background
 
