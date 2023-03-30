@@ -15,7 +15,7 @@ The results are kept in a public Google Sheet, free for anyone to use as a refer
 
 ## How to Participate
 
- 1. Find an accurate stopwatch (e.g. smartphone, smartwatch, PC).
+ 1. Find an accurate stopwatch with subsecond precision (e.g. smartphone, smartwatch, PC).
  2. Install [gbchrono.gb](https://github.com/jkotlinski/gbchrono/releases/) on a Game Boy flash cartridge.
  3. Start your Game Boy. It will beep to tell that is it ready. Prepare your stopwatch.
  4. Simultaneously start stopwatch and tap A on Game Boy. The measurement starts when the button is released.
